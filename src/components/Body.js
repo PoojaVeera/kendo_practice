@@ -36,7 +36,7 @@ import React, { useState } from "react";
 import { Grid, GridColumn } from "@progress/kendo-react-grid";
 import { process } from "@progress/kendo-data-query";
 import orders from "./orders.json";
-// import "../App.scss";
+import "../App.scss";
 
 export const Body = () => {
   const [dataState, setDataState] = useState({
@@ -61,16 +61,7 @@ export const Body = () => {
   // };
 
   return (
-    <div
-      className="body"
-      style={{
-        backgroundColor: "red",
-        position: "absolute",
-        top: "0%",
-        left: "0%",
-        right: "0%",
-      }}
-    >
+    <div className="body">
       {/* <Grid
         className="grid1"
         style={{
@@ -91,24 +82,11 @@ export const Body = () => {
       </Grid> */}
       <Grid data={orders} className="gg">
         <GridColumn field="orderID" title="ID"></GridColumn>
-        <GridColumn field="shipName" tile="Ship"></GridColumn>
-        <GridColumn field="freight" title="Freight"></GridColumn>
+        <GridColumn field="shipName" tile="SHIP"></GridColumn>
+        <GridColumn field="freight" title="FREIGHT"></GridColumn>
+        <GridColumn field="employeeID" title="EMP ID"></GridColumn>
+        <GridColumn field="customerID" title="CUSTOMER ID"></GridColumn>
       </Grid>
-      <style>{`
-        .gg{
-          position:absolute;
-          top:20%;
-          right:10%;
-          left:10%;
-          height:500px;
-        }
-        @media only screen and (min-width:800px){
-        {
-         .gg{
-        display:none;
-
-          }
-        }`}</style>
     </div>
   );
 };

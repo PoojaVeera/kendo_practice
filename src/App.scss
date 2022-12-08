@@ -3,11 +3,26 @@
 }
 .body {
   position: fixed;
-  top: 10%;
+  top: 30%;
   left: 10%;
   right: 10%;
-  background-color: aqua;
 }
 .GL {
   background-color: azure;
+}
+.gg {
+  height: 400px;
+}
+@media only screen and (min-width: 800px) {
+  div.EP {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  div.body {
+    background-color: black;
+  }
+  div.gg {
+    display: none;
+  }
 }
